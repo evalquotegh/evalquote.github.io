@@ -120,10 +120,6 @@ sup {
   padding: 0;
 }
 
-.related small {
-  display: block;
-}
-
 .wrap {
   flex: 1 0 auto;
 }
