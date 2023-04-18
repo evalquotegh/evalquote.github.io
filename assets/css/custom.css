@@ -1,8 +1,15 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   max-width: 960px;
   margin: 0 auto;
   position: relative;
   word-break: break-word;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -49,10 +56,11 @@ sup {
 }
 
 .masthead {
+  background: #FEFEFE;
   margin-bottom: 1rem;
-
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .masthead .masthead-title {
@@ -114,6 +122,14 @@ sup {
 
 .related small {
   display: block;
+}
+
+.wrap {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 @media (min-width: 38em) {
