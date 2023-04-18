@@ -6,6 +6,13 @@
       margin-top: 1rem;
     }
 
+    pre {
+      overflow: auto;
+      word-break: normal;
+      word-wrap: normal;
+      white-space: pre;
+    }
+
     @keyframes rotation {
       from {
         transform: rotate(0deg);
@@ -87,8 +94,8 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a class="site-link" href="{{ site.baseurl }}"> <img class="site-logo" src={{ "/assets/logo.svg" | absolute_url }}
-              width="32" height="32" alt="" />
+            <a class="site-link" href="{{ site.baseurl }}">
+              <img class="site-logo" src={{ "/assets/logo.svg" | absolute_url }} width="32" height="32" alt="" />
               <strong class="site-title">{{ site.title }}</strong>
             </a>
             <span class="separator">&middot;</span>
