@@ -11,14 +11,25 @@
         transform: rotate(359deg);
       }
     }
+
     .site-link {
       display: flex;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 1rem;
       text-decoration: none;
     }
+
     .site-logo {
       margin: 0;
       animation: rotation 10s infinite linear;
+      width: 32px;
+      height: 32px;
+    }
+
+    @media (max-width: 48em) {
+      .masthead-title {
+        margin-left: calc(32px + 8px + 2px + 1rem);
+      }
     }
   </style>
 
@@ -33,7 +44,7 @@
         <div class="container">
           <h3 class="masthead-title">
             <a class="site-link" href="{{ site.baseurl }}">
-              <img class="site-logo" src={{ "/public/logo-32x32.png" | relative_url }} width="32" height="32" alt="" />
+              <img class="site-logo" src={{ "/assets/logo.svg" | absolute_url }} width="32" height="32" alt="" />
               <strong class="site-title">{{ site.title }}</strong>
             </a>
             <small class="site-tagline">{{ site.tagline }}</small>
