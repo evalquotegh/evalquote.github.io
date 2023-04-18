@@ -29,7 +29,7 @@ twitter_username: evalquote
 github_username:  evalquotegh
 paginate: 1
 paginate_path: /page/:num
-permalink: /:title
+permalink: /:slug
 
 # About/contact
 author:
