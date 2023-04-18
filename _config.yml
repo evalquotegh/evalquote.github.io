@@ -21,7 +21,7 @@
 title: evalquote
 tagline: 'A journey to knowledge'
 description: >- # this means to ignore newlines until "baseurl:"
-  'The journey of learning by sharing'
+  The journey of learning by sharing
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://evalquote.com" # the base hostname & protocol for your site, e.g. http://example.com
 domain: evalquote.com
@@ -33,7 +33,7 @@ permalink: /:slug
 
 # About/contact
 author:
-  name: Mark Otto
+  name: Emmanuel-Jelome Fonseca
   url: https://evalquote.com
   email: evalquotegm@gmail.com
 
