@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
   {% include head.html %}
   <style>
     @keyframes rotation {
@@ -12,29 +11,48 @@
       }
     }
 
-    html body .wrap .masthead .container .masthead-title .site-link {
+    .masthead {
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead .masthead-title {
+      padding: 2px 0;
+      margin-left: calc(32px + 16px + 4px);
+    }
+
+    .masthead .masthead-title .site-link {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 8px;
       text-decoration: none;
     }
 
-    html body .wrap .masthead .container .masthead-title .site-link .site-logo {
+    .masthead .masthead-title .site-link .site-logo {
       margin: 0;
       animation: rotation 10s infinite linear;
       width: 32px;
       height: 32px;
     }
 
-    @media (max-width: 48em) {
-      html body .wrap .masthead .container .masthead-title {
-        margin-left: calc(32px + 8px + 2px + 1rem);
+    .sidebar-toggle {
+      border: solid 1px #505050;
+      padding: 0.25rem;
+    }
+
+    @media (min-width: 38em) {
+      .container {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 30.1em) {
+      .sidebar-toggle {
+        position: absolute;
       }
     }
   </style>
 
   <body>
-
     {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
@@ -51,14 +69,9 @@
           </h3>
         </div>
       </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
+      <div class="container content">{{ content }}</div>
     </div>
-
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script src='{{ site.baseurl }}/public/js/script.js'></script>
+    <script src="{{ site.baseurl }}/public/js/script.js"></script>
   </body>
 </html>
