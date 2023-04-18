@@ -2,6 +2,25 @@
 <html lang="en-us">
 
   {% include head.html %}
+  <style>
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    .site-link {
+      display: flex;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .site-logo {
+      margin: 0;
+      animation: rotation 10s infinite linear;
+    }
+  </style>
 
   <body>
 
@@ -13,9 +32,9 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a class="site-link" href="{{ site.baseurl }}" style="display: flex; gap: 0.5rem; text-decoration: none;">
-              <img class="site-logo" src={{ "/public/logo-32x32.png" | relative_url }} width="32" height="32" alt="" style="display: inline; margin: 0;" />
-              <span class="site-title">{{ site.title }}</span>
+            <a class="site-link" href="{{ site.baseurl }}">
+              <img class="site-logo" src={{ "/public/logo-32x32.png" | relative_url }} width="32" height="32" alt="" />
+              <strong class="site-title">{{ site.title }}</strong>
             </a>
             <small class="site-tagline">{{ site.tagline }}</small>
           </h3>
