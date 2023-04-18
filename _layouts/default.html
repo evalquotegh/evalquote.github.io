@@ -22,6 +22,10 @@
       white-space: pre;
     }
 
+    hr {
+      margin-bottom: 1rem;
+    }
+
     @keyframes rotation {
       from {
         transform: rotate(0deg);
@@ -31,8 +35,13 @@
       }
     }
 
+    .post,
+    .page {
+      margin-bottom: 0;
+    }
+
     .masthead {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .masthead .masthead-title {
@@ -81,6 +90,19 @@
       }
     }
 
+    .pagination {
+      margin: 1.5rem 0 0;
+    }
+
+    .related {
+      margin: 1.5rem 0 0;
+      padding: 0;
+    }
+
+    .related small {
+      display: block;
+    }
+
     @media (min-width: 38em) {
       .container {
         max-width: 100%;
@@ -103,8 +125,8 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a class="site-link" href="{{ site.baseurl }}"> <img class="site-logo" src={{ "/assets/logo.svg" | absolute_url }}
-              width="32" height="32" alt="" />
+            <a class="site-link" href={{ "/" | absolute_url }}>
+              <img class="site-logo" src={{ "/assets/logo.svg" | absolute_url }} width="32" height="32" alt="" />
               <strong class="site-title">{{ site.title }}</strong>
             </a>
             <span class="separator">&middot;</span>
