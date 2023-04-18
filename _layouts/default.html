@@ -20,6 +20,9 @@
     }
 
     .masthead .masthead-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       padding: 2px 0;
       margin-left: calc(32px + 16px + 4px);
     }
@@ -29,6 +32,11 @@
       align-items: center;
       gap: 8px;
       text-decoration: none;
+    }
+
+    .masthead .masthead-title .site-tagline {
+      color: #505050;
+      margin-top: 4px;
     }
 
     .masthead .masthead-title .site-link .site-logo {
@@ -73,6 +81,7 @@
               <img class="site-logo" src={{ "/assets/logo.svg" | absolute_url }} width="32" height="32" alt="" />
               <strong class="site-title">{{ site.title }}</strong>
             </a>
+            <span class="separator"> &middot; </span>
             <small class="site-tagline">{{ site.tagline }}</small>
           </h3>
         </div>
