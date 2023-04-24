@@ -164,3 +164,11 @@ a .post-image:active {
   opacity: 1;
   transition: all 0.2s ease-in;
 }
+
+.disclosure {
+  background-color: #fbf1a9;
+  border: 5px solid #ffd700;
+  border-radius: 0.5rem;
+  color: #111111;
+  padding: 0 1em;
+}
