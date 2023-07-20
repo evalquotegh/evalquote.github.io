@@ -2,6 +2,9 @@
   var toggle = document.querySelector('.sidebar-toggle');
   var sidebar = document.querySelector('#sidebar');
   var checkbox = document.querySelector('#sidebar-checkbox');
+  var masthead = document.querySelector('.masthead');
+
+  masthead.prepend(toggle);
 
   document.addEventListener('click', function(e) {
     var target = e.target;

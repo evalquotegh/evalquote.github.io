@@ -1,0 +1,166 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+li > ol,
+li > ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+li > p {
+  margin: 0;
+}
+
+pre {
+  overflow: auto;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+hr {
+  margin-bottom: 1rem;
+}
+
+sup {
+  font-size: smaller;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.post,
+.page {
+  margin-bottom: 0;
+}
+
+.masthead {
+  background: #fefefe;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.masthead .masthead-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.125rem;
+  margin-left: calc(32px + 10px + 2px + 0.5rem);
+}
+
+.masthead .masthead-title .site-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.masthead .masthead-title .site-tagline {
+  color: #505050;
+  margin-top: 0.25rem;
+}
+
+.masthead .masthead-title .site-link .site-logo {
+  margin: 0;
+  animation: rotation 10s infinite linear;
+  width: 32px;
+  height: 32px;
+}
+
+.content figure.highlight {
+  margin: 0;
+}
+
+.sidebar-toggle {
+  border: solid 1px #505050;
+  padding: 0.25rem;
+}
+
+@media (max-width: 48em) {
+  .masthead .masthead-title {
+    text-align: left;
+  }
+
+  .masthead .masthead-title .site-tagline {
+    display: block;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0 0;
+}
+
+.related {
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.wrap {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+@media (min-width: 38em) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 30.1em) {
+  .sidebar-toggle {
+    position: absolute;
+  }
+}
+
+/**
+ * CodePen Home Image w/ Corner Frame
+ * James (@jamestrenda)
+ * Source: https://codepen.io/jamestrenda/pen/WNNNvvR
+ */
+:root {
+  --red: #efefef;
+}
+
+img {
+  box-shadow: -50px -50px 0 -40px var(--red), 50px 50px 0 -40px var(--red);
+  margin-left: 10px;
+}
+
+a .post-image {
+  opacity: 0.8;
+  transition: all 0.2s ease-out;
+}
+
+a .post-image:hover,
+a .post-image:active {
+  opacity: 1;
+  transition: all 0.2s ease-in;
+}

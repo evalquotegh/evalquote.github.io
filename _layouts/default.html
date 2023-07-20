@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
   {% include head.html %}
 
   <body>
-
     {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
@@ -13,19 +11,19 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
+            <a class="site-link" href={{ "/" | absolute_url }}>
+              <img class="site-logo" src={{ "/assets/logo.svg" | absolute_url }} width="32" height="32" alt="" />
+              <strong class="site-title">{{ site.title }}</strong>
+            </a>
+            <span class="separator">&middot;</span>
+            <small class="site-tagline">{{ site.tagline }}</small>
           </h3>
         </div>
       </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
+      <div class="container content">{{ content }}</div>
     </div>
-
+	{% include footer.html %}
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script src='{{ site.baseurl }}/public/js/script.js'></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
